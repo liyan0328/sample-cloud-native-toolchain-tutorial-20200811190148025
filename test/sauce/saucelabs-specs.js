@@ -121,7 +121,7 @@ describe('tutorial (' + desired.browserName + ')', function() {
 
   it('Swagger UI page', function(done) {
     browser
-      .get(url + '/docs')
+      .get(url + 'docs/')
       .title()
       .should.become('Swagger UI')
       .nodeify(done);
