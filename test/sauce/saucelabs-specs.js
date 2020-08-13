@@ -119,4 +119,12 @@ describe('tutorial (' + desired.browserName + ')', function() {
       .nodeify(done);
   });
 
+  it('Swagger UI page', function(done) {
+    browser
+      .get(url + '/docs')
+      .title()
+      .should.become('Swagger UI')
+      .nodeify(done);
+  });
+  
 });
