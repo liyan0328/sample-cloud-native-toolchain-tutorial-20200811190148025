@@ -118,6 +118,14 @@ describe('tutorial (' + desired.browserName + ')', function() {
       .should.become('DevOps Tutorial App')
       .nodeify(done);
   });
+  
+  it('Hello Joe page', function(done) {
+    browser
+      .get(url + 'hello?name=joe')
+      .findElement(wd.By.css('pre')).getText()
+      .should.become('Hello, joe!')
+      .nodeify(done);
+  });
 
   it('Swagger UI page', function(done) {
     browser
