@@ -1,5 +1,6 @@
 var wd = require('wd');
 require('colors');
+var webdriver = require('selenium-webdriver');
 
 var _ = require('lodash');
 var chai = require('chai');
@@ -122,7 +123,7 @@ describe('tutorial (' + desired.browserName + ')', function() {
   it('Hello Joe page', function(done) {
     browser
       .get(url + 'hello?name=joe')
-      .findElement(wd.By.css('pre')).getText()
+      .findElement(webdriver.By.css('pre')).getText()
       .should.become('Hello, joe!')
       .nodeify(done);
   });
