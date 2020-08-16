@@ -123,7 +123,7 @@ describe('tutorial (' + desired.browserName + ')', function() {
     browser
       .get(url + 'hello?name=joe')
       .elementByCss('pre').text()
-      .should.become('Hello, joe!')
+      .should.become('"Hello, joe!"')
       .nodeify(done);
   });
 
